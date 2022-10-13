@@ -1,10 +1,12 @@
 package banco;
 
+import java.math.BigDecimal;
+
 public class Conta {
 
-    private static double limiteChequeEspecial;
+    public static double limiteChequeEspecial = 1000.0;
     private String numero;
-    private double saldo;
+    public double saldo;
 
     public Conta(String numero, double saldo) {
         this.numero = numero;
@@ -19,13 +21,18 @@ public class Conta {
         this.saldo += saldo;
     }
 
-    public static void modificarLimite(double novoLimite) {
-        limiteChequeEspecial = novoLimite;
-    }
+//    public static void modificarLimite(double novoLimite) {
+//        limiteChequeEspecial = novoLimite;
+//    }
 
     public String getNumero() {
-        return this.numero;
+        return numero;
     }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
 
     public double getSaldo() {
         return this.saldo;
